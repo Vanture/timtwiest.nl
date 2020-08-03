@@ -52,6 +52,7 @@ a:hover {
 .header img {
   width: 250px;
   height: 250px;
+  border-radius: 50%;
 }
 
 .container {
