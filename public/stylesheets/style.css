@@ -1,6 +1,6 @@
 :root {
-  --primary-color: rgba(62, 61, 109);
-  --text-color: rgba(255, 255, 255);
+  --primary-color: #f2efe4;
+  --text-color: #222;
 }
 
 * {
@@ -28,8 +28,8 @@ h2 {
 }
 
 a {
-  color: rgb(252, 248, 151);
-  border-bottom: 1px dashed rgb(252, 248, 151);
+  color: #3e3d6d;
+  border-bottom: 1px dashed #3e3d6d;
   text-decoration: none;
 }
 
@@ -56,8 +56,11 @@ a:hover {
 }
 
 .container {
-  text-align: center;
-  margin: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
   animation: 0.8s ease 0s 1 normal none running zoom-in;
 }
 
@@ -80,12 +83,22 @@ a:hover {
 }
 
 .links img {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .links img:hover {
   transform: scale(1.6);
 }
+
+.wave {
+  margin: 0 10px;
+  animation-name: wave-animation;  
+  animation-duration: 2.5s;       
+  animation-iteration-count: 1;  
+  transform-origin: 70% 70%;     
+  display: inline-block;
+}
+
 
 @media screen and (max-width: 700px) {
   .header {
@@ -103,3 +116,15 @@ a:hover {
     opacity: 1;
   }
 }
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(22.0deg) } 
+ 20% { transform: rotate(-10.0deg) }
+ 30% { transform: rotate(18.0deg) }
+ 40% { transform: rotate(-7.0deg) }
+ 50% { transform: rotate(12.0deg) }
+ 60% { transform: rotate( 0.0deg) }  
+100% { transform: rotate( 0.0deg) }
+}
+
